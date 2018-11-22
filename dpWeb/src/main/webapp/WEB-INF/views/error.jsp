@@ -47,55 +47,51 @@
 
 <body>
 	<div class="wrapper">
-		<!-- Navigation -->
-		<%@include file="./shared/navbar.jsp"%>
-		<!-- Page Content -->
-		<div class="content">
-			<c:if test="${userClickHome == true}">
-				<%@include file="home.jsp"%>
-			</c:if>
-			<c:if test="${userClickAbout == true}">
-				<%@include file="about.jsp"%>
-			</c:if>
-			<c:if test="${userClickContact == true}">
-				<%@include file="contact.jsp"%>
-			</c:if>
 
-			<c:if
-				test="${userClickAllProducts == true or userCategoryProduct == true}">
-				<%@include file="listProducts.jsp"%>
-			</c:if>
+	    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	        <div class="container">
+	            <!-- Brand and toggle get grouped for better mobile display -->
+	            <div class="navbar-header">
+	                <a class="navbar-brand" href="${contextRoot}/home">Home</a>
+	            </div>
+			</div>
+		</nav>
 			
-			<c:if
-				test="${userClickShowProduct == true}">
-				<%@include file="singleProduct.jsp"%>
-			</c:if>
-
-			<hr>
+		
+		<div class="content">
+		
+			<div class="container">
+			
+				<div class="row">
+				
+					<div class="col-xs-12">
+					
+						
+						<div class="jumbotron">
+						
+							<h1>${errorTitle}</h1>
+							<hr/>
+						
+							<blockquote style="word-wrap:break-word">
+								
+								${errorDescription}
+							
+							</blockquote>						
+						
+						</div>
+						
+											
+					</div>					
+				
+				</div>
+			
+			</div>
+							
 		</div>
-		<!-- Footer Comes Here -->
-		<%@include file="./shared/footer.jsp"%>
 
-
-		<!-- /.container -->
-
-		<!-- jQuery -->
-		<script src="${js}/jquery.js"></script>
-
-		<!-- Bootstrap Core JavaScript -->
-		<script src="${js}/bootstrap.min.js"></script>
-		<!-- DataTable Plugin -->
-		<script src="${js}/jquery.dataTables.js"></script>
 		
-		<!-- DataTable Bootstrap Script -->
-		<script src="${js}/dataTables.bootstrap.js"></script>
-		
-		<!-- DataTable Bootstrap Script -->
-		<script src="${js}/bootbox.min.js"></script>
-		
+		<%@include file="./shared/footer.jsp" %>
 
-		<!-- My own JavaScript -->
-		<script src="${js}/myapp.js"></script>
 	</div>
 </body>
 

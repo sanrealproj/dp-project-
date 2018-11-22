@@ -3,12 +3,7 @@
         <div class="row">
 
             <div class="col-md-3">
-                <p class="lead">Digi Pretty Exclusive</p>
-                <div class="list-group">
-                    <a href="#" class="list-group-item">Kurtis</a>
-                    <a href="#" class="list-group-item">Kids Party Wear</a>
-                    <a href="#" class="list-group-item">Others</a>
-                </div>
+			<%@include file="./shared/sidebar.jsp" %>
             </div>
 
             <div class="col-md-9">

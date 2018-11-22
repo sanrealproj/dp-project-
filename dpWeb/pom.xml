@@ -7,12 +7,19 @@
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>dpWeb Maven Webapp</name>
-	<url>http://maven.apache.org</url>
+	<url>http://maven.apache.org</url> 
 	<properties>
 		<javee.version>8.0</javee.version>
 		<spring.version>5.1.0.RELEASE</spring.version>
 	</properties>
 	<dependencies>
+
+		<!-- Linking with backend project -->
+		<dependency>
+			<groupId>com.dp</groupId>
+			<artifactId>dpback</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 		<!-- JAVA EE API -->
 		<dependency>
 			<groupId>javax</groupId>
@@ -23,10 +30,21 @@
 		<!--spring-webmvc -->
 		<dependency>
 			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-		
+
 		<!--JSTL -->
 		<dependency>
 			<groupId>jstl</groupId>
@@ -38,7 +56,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
+			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
